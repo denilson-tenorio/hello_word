@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var time = prompt("Qual o seu time do coração? ");
+var ptpassado = parseInt(prompt("Qual a pontuação do  "+time+" na temporada passada?"));
+var vitorias = parseInt(prompt("Qual o número de vitórias do " + time + " no brasileiro desse ano?"));
+var empates = parseInt(prompt("Qual o número de empates do " + time + " no brasileiro desse ano?"));
+var pontos = vitorias*3 + empates;
+
+mostra("A pontuação do "+ time +" foi :" + pontos);
+
+if (pontos > ptpassado) {
+	mostra("O " + time + " está melhor do que temporada passada!");
+}
+
+if (pontos < ptpassado) {
+	mostra("O " + time + " está pior do que temporada passada!");
+}
+
+if (pontos == ptpassado) {
+	mostra("O " + time + " está com a mesma campanha da temporada passada.")
+}
+
+</script>

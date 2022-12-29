@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+
+var totalfamiliares = parseInt(prompt("Qual a quantidade de familiares? "));
+
+var totalidades = 0;
+
+for(var contador = 1; contador <= totalfamiliares; contador++) {
+    var idade = parseInt(prompt("Qual a idade? "));
+    totalidades = totalidades + idade;
+}
+
+mostra("A média aritimética das idades é: " + totalidades/totalfamiliares);
+mostra("FIM!");
+</script>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+var anocopa = 1930;
+alert("Bem vindo ao programinha para saber as datas das copas passadas e futuras!");
+
+var limite = parseInt(prompt("Até qual ano você está interessado? "));
+
+while(anocopa<=limite) {
+	if (anocopa<= 2022){
+		mostra("Tivemos copa em "+ anocopa);
+		anocopa = anocopa+4;
+	}
+	else {
+		mostra("Teremos copa em "+ anocopa);
+		anocopa = anocopa+4;
+	}
+}
+mostra("FIM!")
+</script>

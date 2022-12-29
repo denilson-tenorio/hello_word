@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<script>
+
+
+
+    function  pulalinha() {
+
+        document.write("<br><br>");
+    
+    }
+
+        function mostra(x) {
+
+            document.write(x);
+
+            pulalinha();
+    }
+
+    
+    var ano = 2021;
+    var F = ano-1977;
+    var J = ano-1996;
+    var C = ano-1998; 
+    var M = (F+J+C)/3
+
+   
+    
+    mostra("Ano passado Flávio tinha " + (ano - 1977) + " anos;");
+   
+    mostra("Ano passado Joaquim tinha " + (ano - 1996) + " anos;");
+    
+    mostra("Ano passado Chico tinha " + (ano - 1998) + " anos;");
+
+    mostra("Ano passado a média das idades era aporximadamente " + Math.round(M) + ".");
+
+    ano = ano+1;
+    F = F+1;
+    J = J+1;
+    C = C+1;
+    M = (F+J+C)/3;
+    
+    mostra("Flávio tem " + F + " anos;");
+
+    mostra("Joaquim tem " + J + " anos;");
+    
+    mostra("Chico tem " + C + " anos;");
+
+    mostra("A média das idades é  aporximadamente " + Math.round(M) + ".");
+
+</script>
+

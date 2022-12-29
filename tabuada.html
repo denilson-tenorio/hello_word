@@ -1,0 +1,29 @@
+<meta charset="UTF-8"> 
+
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+alert("Bem vindo, a sua tabuada online!");
+
+var n = parseInt(prompt("Qual o número que você quer a tabuada? "));
+
+var limite = parseInt(prompt("Até qual número você quer multiplicar? "));
+
+function multi(numrero) {
+    mostra(n + " vezes " + numrero + " é " + n * numrero);
+}
+    
+
+for(var contador = 1; contador <= limite; contador++) {
+    multi(contador);
+}
+mostra("FIM!");
+</script>

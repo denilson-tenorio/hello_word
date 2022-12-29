@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function sorteia(n) {
+	return Math.round(Math.random() * n);
+}    
+
+var num = parseInt(prompt("Escolha o intervalo do jogo com um número natural: "));
+
+alert("Tente vencer a máquina, descubra um número natural entre 0 e "+num + " Você terá 3 chances!");
+
+var numero = sorteia(num);
+
+var tentativas = 1;
+
+while(tentativas <=3 && numerojogador!= numero) {
+    var numerojogador = parseInt(prompt("A máquina já escolheu. Qual o sua tentativa de número " + tentativas +"? "));
+    	if (numerojogador==numero){
+		mostra("Você acertou! Você escolheu: " +numerojogador+  " E o número era: "+numero);
+		} 
+		else {
+		mostra("Você errou! Você escolheu: " +numerojogador+ " E o número era: "+numero);
+		}
+	tentativas++;
+}
+</script>
