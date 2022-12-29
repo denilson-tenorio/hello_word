@@ -1,0 +1,78 @@
+<meta charset="UTF-8">
+
+<input/>
+
+<button>
+    Advinhe o numéro escolhido!
+</button>
+
+<script>
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function sorteia(n) {
+	return Math.round(Math.random() * n);
+}    
+
+var input = document.querySelector("input");
+input.focus();
+
+function sorteiNumeros(quantidade){
+    
+    var segredos = [];
+
+    var numero = 0;
+    
+    while (numero < quantidade){
+     
+        var numeroAleatorio = sorteia(10);
+        
+        var achou = false;
+
+        for(var posicao = 0; posicao< segredos.length; posicao++){
+            if (segredos[posicao] == numeroAleatorio){
+                achou = true; 
+                break;
+            }
+        }
+        if (achou == false){ 
+            segredos.push(sorteia(10))
+        };
+
+        numero++;
+    }
+    return segredos;
+}
+
+var segredos = sorteiNumeros(5);
+
+console.log(segredos);
+
+function verifica() {
+    var achou = false;
+
+    for(var posicao = 0; posicao < segredos.length ; posicao++) {
+        if (input.value == segredos[posicao]) {
+            alert("Você acertou! Os número escolhido eram: "+ segredos);
+            achou = true; 
+            break;
+        }
+    }
+    if (achou == false) {
+        alert("Você errou! Os números que pensei foram "+segredos);
+    }
+    segredos = sorteiNumeros(5);
+    input.value = "";
+    input.focus(); 
+}
+
+var button = document.querySelector("button");
+
+button.onclick = verifica;
+</script>
